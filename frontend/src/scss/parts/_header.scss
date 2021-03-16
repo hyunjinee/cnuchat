@@ -1,0 +1,40 @@
+.header {
+  height: 85px;
+  width: 100%;
+  //   padding: 10px 0px;
+
+  .container {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    cursor: pointer;
+    // align-items: center;
+  }
+  button {
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  .online-count {
+    min-width: 120px;
+    text-align: right;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+  .header {
+    position: fixed;
+    z-index: 10000;
+    .online-count {
+      display: none;
+    }
+    button {
+      font-size: 1em;
+    }
+  }
+}
