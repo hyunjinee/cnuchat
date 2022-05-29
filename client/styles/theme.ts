@@ -6,9 +6,21 @@ export const flexCenter = css`
   justify-content: center;
 `;
 
-export const theme: DefaultTheme = {
-  color: {},
-  boxShadow: {},
+export const darkTheme: DefaultTheme = {
+  color: {
+    black: '#000000',
+    blue: '#3EFFFF',
+    red: '#FF5E5E',
+    white: '#FFFFFF',
+  },
+};
+export const lightTheme: DefaultTheme = {
+  color: {
+    black: '#FFFFFF',
+    blue: '#6400ff',
+    red: '#00ff50',
+    white: '#000000',
+  },
 };
 
 const customMediaQuery = (maxWidth: number): string =>

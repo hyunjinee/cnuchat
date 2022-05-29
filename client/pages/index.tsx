@@ -19,6 +19,8 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   ${flexCenter};
+  background-color: ${({ theme }) => theme.color.black};
+  color: ${({ theme }) => theme.color.white};
 `;
 
 export default Home;
