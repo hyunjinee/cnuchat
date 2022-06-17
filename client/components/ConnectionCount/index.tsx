@@ -1,7 +1,12 @@
 import { Container } from './styles';
 
-const ConnectionCount = () => {
-  return <Container>13명 접속중</Container>;
+const ConnectionCount: React.FC = () => {
+  return (
+    <Container>
+      <div />
+      <span>15명 접속중</span>
+    </Container>
+  );
 };
 
 export default ConnectionCount;
