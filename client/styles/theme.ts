@@ -1,16 +1,10 @@
 import { DefaultTheme, css } from 'styled-components';
 
-export const flexCenter = css`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
 export const darkTheme: DefaultTheme = {
   color: {
     black: '#000000',
-    blue: '#3EFFFF',
-    red: '#FF5E5E',
+    blue: '#3385F7',
+    red: '#FF7B93',
     white: '#FFFFFF',
   },
 };

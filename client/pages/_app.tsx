@@ -3,8 +3,9 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import styled, { ThemeProvider } from 'styled-components';
 
-import { GlobalStyle } from '../styles/globalStyle';
-import { lightTheme, darkTheme } from '../styles/theme';
+import { GlobalStyle } from 'styles/globalStyle';
+import { lightTheme, darkTheme } from 'styles/theme';
+import { UserProvider } from 'contexts/UserContext';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState('dark');
@@ -21,12 +22,15 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <GlobalStyle />
-      <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
-        <ThemeToggle onClick={handleTheme} isDark={theme === 'dark'}>
+      <UserProvider>
+        <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
+          {/* <ThemeToggle onClick={handleTheme} isDark={theme === 'dark'}>
           {theme === 'dark' ? 'LIGHT MODE' : 'DARK MODE'}
-        </ThemeToggle>
-        <Component {...pageProps} />
-      </ThemeProvider>
+        </ThemeToggle> */}
+
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </UserProvider>
     </>
   );
 }

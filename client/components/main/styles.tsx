@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { media } from 'styles/theme';
+import { flexCenter } from 'styles/utils';
 
 export const Container = styled.div`
   margin-top: -12rem;
@@ -22,6 +24,9 @@ export const NickNameInput = styled.input`
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   font-size: 1.5rem;
+
+  ${media.mobile} {
+  }
 `;
 
 export const TalkWrapper = styled.div`
@@ -30,18 +35,32 @@ export const TalkWrapper = styled.div`
   margin-top: 3rem;
 `;
 
-export const OneVsOneTalk = styled.button`
+export const GroupTalk = styled.button`
+  ${flexCenter};
+  font-size: 1.6rem;
+  font-weight: 600;
   width: 15.2rem;
   height: 4.6rem;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   border: none;
+  outline: none;
   cursor: pointer;
+
+  color: '#121212';
+  background-color: ${({ theme }) => theme.color.blue};
 `;
 
-export const GroupTalk = styled.button`
+export const PersonalTalk = styled.button`
+  ${flexCenter};
+  font-size: 1.6rem;
+  font-weight: 600;
   width: 15.2rem;
   height: 4.6rem;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
   border: none;
+  outline: none;
   cursor: pointer;
+
+  color: '#121212';
+  background-color: ${({ theme }) => theme.color.red};
 `;
