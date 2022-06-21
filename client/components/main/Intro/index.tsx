@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import { useUser } from 'contexts/UserContext';
+import Header from 'components/common/Header';
 import {
   Container,
   GroupTalk,
@@ -10,14 +11,15 @@ import {
   PersonalTalk,
   TalkWrapper,
 } from './styles';
-import React from 'react';
 
 const Intro = () => {
   const { nickname, setNickname } = useUser();
   const router = useRouter();
   console.log(nickname);
+
   return (
     <Container>
+      <Header />
       <Link href="/">
         <Image src="/assets/cnu.png" alt="충남대학교" width={298} height={78} />
       </Link>
