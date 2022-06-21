@@ -24,11 +24,11 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 };
 
 export const useUser = () => {
-  const nickname = useContext(UserContext);
+  const { nickname, setNickname } = useContext(UserContext);
 
-  if (nickname === undefined) {
+  if (nickname === undefined || setNickname === undefined) {
     throw new Error('useUser must be used within a UserProvider');
   }
 
-  return nickname;
+  return { nickname, setNickname };
 };
