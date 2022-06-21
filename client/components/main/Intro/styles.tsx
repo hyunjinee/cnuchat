@@ -11,6 +11,22 @@ export const Container = styled.div`
   img {
     cursor: pointer;
   }
+
+  ${media.mobile} {
+    width: 100%;
+    margin: 0 auto;
+  }
+`;
+
+export const Description = styled.span`
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+
+  ${media.mobile} {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
 `;
 
 export const NickNameInput = styled.input`
@@ -18,15 +34,35 @@ export const NickNameInput = styled.input`
   border: none;
   border-radius: 10px;
   border-color: rgba(221, 221, 221, 1);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: 0.1rem solid rgba(221, 221, 221, 1);
+  /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
   height: 4.9rem;
   width: 33.6rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   font-size: 1.5rem;
+  margin: 0 auto;
+
+  transition: 0.125s all ease-in;
+
+  &:focus {
+    border: 2px solid #2b7cfe;
+  }
 
   ${media.mobile} {
   }
+`;
+
+export const NickNameInput2 = styled.input`
+  margin-top: 3rem;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+  /* border: 1px solid '#f5f5f5' */
+  border-radius: 0.5rem;
+
+  transition: 0.125 all ease-in;
 `;
 
 export const TalkWrapper = styled.div`

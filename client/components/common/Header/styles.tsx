@@ -6,7 +6,6 @@ export const HeaderContainer = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  /* background-color: red; */
   height: 7rem;
 
   ${flexCenter}
