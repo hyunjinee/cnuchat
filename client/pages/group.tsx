@@ -6,6 +6,7 @@ import ChatForm from 'components/chat/ChatForm';
 import ChatHeader from 'components/chat/ChatHeader';
 import ChatList from 'components/chat/ChatList';
 import { Container } from 'styles/utils';
+import styled from 'styled-components';
 
 const Group: NextPage = () => {
   const { nickname, setNickname } = useUser();
@@ -13,14 +14,18 @@ const Group: NextPage = () => {
   console.log(nickname, setNickname, '??');
 
   return (
-    <Container>
+    <GroupPageContainer>
       <ChatLayout>
         <ChatHeader />
         <ChatList />
         <ChatForm />
       </ChatLayout>
-    </Container>
+    </GroupPageContainer>
   );
 };
+
+const GroupPageContainer = styled(Container)`
+  background: blue;
+`;
 
 export default Group;

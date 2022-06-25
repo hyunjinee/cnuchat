@@ -1,5 +1,7 @@
+import { Container } from './styles';
+
 const ChatHeader: React.FC = () => {
-  return <div>안녕하세요 현진님</div>;
+  return <Container>안녕하세요 현진님</Container>;
 };
 
 export default ChatHeader;

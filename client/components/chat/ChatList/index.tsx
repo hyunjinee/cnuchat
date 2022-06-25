@@ -1,5 +1,7 @@
+import { Container } from './styles';
+
 const ChatList: React.FC = () => {
-  return <div>chatlist</div>;
+  return <Container>chatlist</Container>;
 };
 
 export default ChatList;

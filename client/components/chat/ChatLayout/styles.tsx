@@ -6,6 +6,9 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
+  background-color: white;
+  overflow: hidden;
+
   /* max-width: 43rem; */
   height: 81.2rem;
   width: 43rem;
