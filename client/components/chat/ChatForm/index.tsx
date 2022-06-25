@@ -25,7 +25,12 @@ const ChatForm: React.FC = () => {
     <Container>
       <Form onSubmit={onSubmit}>
         <FeatureContainer>
-          <div>재연결</div>
+          <Image
+            src="/assets/refresh.svg"
+            alt="재연결"
+            width={30}
+            height={30}
+          />
           {/* <div>+</div> */}
         </FeatureContainer>
 
