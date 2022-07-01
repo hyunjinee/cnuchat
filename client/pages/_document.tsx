@@ -1,10 +1,4 @@
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,
-} from 'next/document';
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
@@ -15,8 +9,7 @@ class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
+          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -42,16 +35,14 @@ class MyDocument extends Document {
           <link rel="shortcut icon" href="/favicon.svg" type="image/svg" />
           <meta property="og:title" content="충남대학교 채팅" />
           <meta property="og:image" content="" />
-          <meta
-            property="og:description"
-            content="충남대학교 학생들과 대화를 나눌 수 있는 플랫폼입니다."
-          />
+          <meta property="og:description" content="충남대학교 학생들과 대화를 나눌 수 있는 플랫폼입니다." />
           <meta property="og:url" content="/" />
           <meta name="description" content="" />
           <meta name="keywords" content="" />
         </Head>
         <body>
           <Main />
+          <div id="root-dialog" />
           <NextScript />
         </body>
       </Html>
