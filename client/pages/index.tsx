@@ -1,22 +1,29 @@
 import type { NextPage } from 'next';
 
-import Intro from 'components/main/Intro';
-import { Container } from 'styles/utils';
+import Header from 'components/common/Header';
+import { AppLayout } from 'styles/utils';
 
 const Home: NextPage = () => {
   return (
-    <Container>
-      <Intro />
-
+    <AppLayout>
+      <Header />
+      {/* <Intro /> */}
       {/* <ConnectionCount /> */}
-    </Container>
+    </AppLayout>
   );
 };
 
 // const Container = styled.div`
+//   position: relative;
 //   width: 100%;
+//   max-width: 48rem;
 //   height: 100vh;
-//   ${flexCenter};
+
+//   margin: 0 auto;
+//   /* display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   ${flexCenter}; */
 //   /* background-color: ${({ theme }) => theme.color.black}; */
 //   /* color: ${({ theme }) => theme.color.white}; */
 // `;
