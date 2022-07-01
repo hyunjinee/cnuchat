@@ -1,24 +1,16 @@
 import type { NextPage } from 'next';
 
-import Intro from 'components/main/Intro';
-import { Container } from 'styles/utils';
+import Header from 'components/common/Header';
+import AppLayout from 'components/common/AppLayout';
 
 const Home: NextPage = () => {
   return (
-    <Container>
-      <Intro />
-
+    <AppLayout>
+      <Header />
+      {/* <Intro /> */}
       {/* <ConnectionCount /> */}
-    </Container>
+    </AppLayout>
   );
 };
-
-// const Container = styled.div`
-//   width: 100%;
-//   height: 100vh;
-//   ${flexCenter};
-//   /* background-color: ${({ theme }) => theme.color.black}; */
-//   /* color: ${({ theme }) => theme.color.white}; */
-// `;
 
 export default Home;
