@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { Container, Message } from './styles';
 
 interface ChatProps {

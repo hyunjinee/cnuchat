@@ -26,7 +26,9 @@ const Group: NextPage = () => {
 };
 
 const GroupPageContainer = styled(Container)`
-  background: blue;
+  background-color: #fafafa;
+  background-color: #d0ebff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
 `;
 
 export default Group;

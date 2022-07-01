@@ -85,6 +85,12 @@ const tempList: { type: 'me' | 'other'; message: string }[] = [
     message:
       '안녕하세요 가나다라 마바사 아자차카타파하 라인 바뀝니다 ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ',
   },
+
+  {
+    type: 'me',
+    message:
+      '안녕하세요 가나다라 마바사 아자차카타파하 라인 바뀝니다 ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ',
+  },
 ];
 
 const ChatList: React.FC = () => {

@@ -46,7 +46,7 @@ class MyDocument extends Document {
             property="og:description"
             content="충남대학교 학생들과 대화를 나눌 수 있는 플랫폼입니다."
           />
-          <meta property="og:url" content="//" />
+          <meta property="og:url" content="/" />
           <meta name="description" content="" />
           <meta name="keywords" content="" />
         </Head>

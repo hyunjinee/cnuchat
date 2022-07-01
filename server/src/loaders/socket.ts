@@ -11,3 +11,5 @@ const socketLoader = (server: http.Server, app: express.Application) => {
     },
   });
 };
+
+export default socketLoader;

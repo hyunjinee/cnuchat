@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div<{ type: 'me' | 'other' }>`
   display: flex;
-  background-color: ${({ type }) => (type === 'me' ? '#f5f5f5' : 'blue')};
+  background-color: ${({ type }) => (type === 'me' ? '#EFEFEF' : '#ffffff')};
   align-self: ${({ type }) => (type === 'me' ? 'flex-end' : 'flex-start')};
   align-items: center;
 
@@ -21,7 +21,11 @@ export const Container = styled.div<{ type: 'me' | 'other' }>`
 
   border-radius: 1rem;
 
+  border: 2px solid #efefef;
+
   font-size: 1.6rem;
+  font-family: -apple-system, 'system-ui', 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', sans-serif;
 
   line-break: anywhere;
 `;
