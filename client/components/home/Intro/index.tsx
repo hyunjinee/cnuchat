@@ -10,7 +10,7 @@ const Intro: React.FC = () => {
         안녕하세요!😀 <br />
         충남대학교 학생들을 위한 채팅방을 만들었습니다!
       </Description>
-      <NickNameInput />
+      <NickNameInput placeholder="닉네임을 입력해주세요." />
       <TalkWrapper>
         <GroupTalk onClick={() => router.push('/group')}>단체톡 하기</GroupTalk>
         <PersonalTalk onClick={() => router.push('/personal')}>일대일 톡하기</PersonalTalk>
