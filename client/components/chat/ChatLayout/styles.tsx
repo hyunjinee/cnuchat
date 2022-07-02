@@ -10,11 +10,11 @@ export const Container = styled.div`
   overflow: hidden;
 
   /* max-width: 43rem; */
-  height: 81.2rem;
-  width: 43rem;
+  width: 100%;
+  height: 100%;
 
-  border: 1px solid black;
-  border-radius: 1.5rem;
+  /* border: 1px solid black; */
+  /* border-radius: 1.5rem; */
 
   ${media.mobile} {
     width: 100%;

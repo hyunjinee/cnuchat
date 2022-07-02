@@ -20,7 +20,11 @@ export const ContainerInner = styled.div<{ page?: string }>`
   min-height: 100vh;
 
   margin: 0 auto;
-  padding: 0 1.8rem 8rem; // TODO
+  ${({ page }) =>
+    page === 'home' &&
+    css`
+      padding: 0 1.8rem 8rem; // TODO
+    `}
 
   background-color: white;
 `;
