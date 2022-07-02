@@ -18,6 +18,8 @@ export const ButtonContainer = styled.div`
   ${flexCenter};
 
   margin-left: 0.8rem;
+
+  cursor: pointer;
   /* align-self: flex-start; */
   /* justify-content */
 `;
