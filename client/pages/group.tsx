@@ -17,12 +17,11 @@ const Group: NextPage = () => {
 
   return (
     <AppLayout>
-      <ChatHeader />
-      {/* <ChatLayout> */}
-      {/* <ChatHeader />
+      <ChatLayout>
+        <ChatHeader />
         <ChatList />
-        <ChatForm /> */}
-      {/* </ChatLayout> */}
+        <ChatForm />
+      </ChatLayout>
     </AppLayout>
   );
 };

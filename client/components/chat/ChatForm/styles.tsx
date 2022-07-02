@@ -5,12 +5,9 @@ import { flexCenter } from 'styles/utils';
 
 export const Container = styled.div`
   /* background-color: green; */
-  height: 6rem;
+  /* height: 6rem; */
+  min-height: 5rem;
   border-top: 1px solid black; // TODO 색깔 바꿔야함
-
-  ${media.mobile} {
-    height: 6.5rem;
-  }
 `;
 
 export const Form = styled.form`

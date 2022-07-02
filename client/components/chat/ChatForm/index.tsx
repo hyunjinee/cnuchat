@@ -35,7 +35,7 @@ const ChatForm: React.FC = () => {
         </ButtonContainer>
       </Form>
 
-      {dialogVisible && <Dialog />}
+      {dialogVisible && <Dialog type={'alert'} children={undefined} />}
     </Container>
   );
 };
