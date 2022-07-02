@@ -1,15 +1,13 @@
-import Image from 'next/image';
 import React, { useState } from 'react';
-import {
-  Container,
-  FeatureContainer,
-  Form,
-  ButtonContainer,
-  MessageInput,
-} from './styles';
+import Image from 'next/image';
+
+import useDialog from 'hooks/useDialog';
+import { Container, FeatureContainer, Form, ButtonContainer, MessageInput } from './styles';
+import Dialog from 'components/common/Dialog';
 
 const ChatForm: React.FC = () => {
   const [message, setMessage] = useState('');
+  const { dialogVisible, toggleDialog } = useDialog();
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setMessage(e.target.value);
@@ -24,14 +22,8 @@ const ChatForm: React.FC = () => {
   return (
     <Container>
       <Form onSubmit={onSubmit}>
-        <FeatureContainer>
-          <Image
-            src="/assets/refresh.svg"
-            alt="재연결"
-            width={30}
-            height={30}
-          />
-          {/* <div>+</div> */}
+        <FeatureContainer onClick={() => toggleDialog()}>
+          <Image src="/assets/refresh.svg" alt="재연결" width={30} height={30} />
         </FeatureContainer>
 
         <MessageInput onChange={onChange} value={message} />
@@ -42,6 +34,8 @@ const ChatForm: React.FC = () => {
           </button>
         </ButtonContainer>
       </Form>
+
+      {dialogVisible && <Dialog />}
     </Container>
   );
 };

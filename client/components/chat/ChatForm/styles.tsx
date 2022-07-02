@@ -25,6 +25,7 @@ export const Form = styled.form`
 export const FeatureContainer = styled.div`
   ${flexCenter};
   width: 5rem;
+  cursor: pointer;
 `;
 
 export const MessageInput = styled.input`
