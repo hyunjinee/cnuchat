@@ -12,6 +12,7 @@
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "recoil": "^0.7.4",
     "socket.io-client": "^4.5.1",
     "styled-components": "^5.3.5",
     "styled-reset": "^4.4.1"

@@ -8,6 +8,7 @@ import ChatForm from 'components/chat/ChatForm';
 import ChatHeader from 'components/chat/ChatHeader';
 import ChatList from 'components/chat/ChatList';
 import { Container } from 'styles/utils';
+import AppLayout from 'components/common/AppLayout';
 
 const Group: NextPage = () => {
   const { nickname, setNickname } = useUser();
@@ -15,13 +16,13 @@ const Group: NextPage = () => {
   console.log(nickname, setNickname, '??');
 
   return (
-    <GroupPageContainer>
+    <AppLayout>
       <ChatLayout>
         <ChatHeader />
         <ChatList />
         <ChatForm />
       </ChatLayout>
-    </GroupPageContainer>
+    </AppLayout>
   );
 };
 

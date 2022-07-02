@@ -4,6 +4,7 @@ import { flexCenter } from 'styles/utils';
 export const Container = styled.div`
   position: relative;
   height: 5rem;
+  min-height: 5rem;
 
   background-color: lightblue;
   ${flexCenter};
@@ -17,6 +18,8 @@ export const ButtonContainer = styled.div`
   ${flexCenter};
 
   margin-left: 0.8rem;
+
+  cursor: pointer;
   /* align-self: flex-start; */
   /* justify-content */
 `;

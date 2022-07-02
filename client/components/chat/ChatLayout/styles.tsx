@@ -3,23 +3,15 @@ import { media } from 'styles/theme';
 
 export const Container = styled.div`
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: space-between;
 
   background-color: white;
-  overflow: hidden;
-
+  /* overflow: scroll; */
   /* max-width: 43rem; */
-  height: 81.2rem;
-  width: 43rem;
+  /* width: 100%;
+  height: 100%; */
 
-  border: 1px solid black;
-  border-radius: 1.5rem;
-
-  ${media.mobile} {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 0;
-  }
+  max-height: 100vh;
 `;

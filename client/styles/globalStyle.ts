@@ -31,5 +31,9 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   }
 
-
+  button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
 `;

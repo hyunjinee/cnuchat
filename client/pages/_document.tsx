@@ -42,6 +42,7 @@ class MyDocument extends Document {
         </Head>
         <body>
           <Main />
+          <div id="root-dialog" />
           <NextScript />
         </body>
       </Html>
