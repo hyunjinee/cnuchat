@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from 'styles/theme';
 
 export const DialogWrapper = styled.div`
   position: fixed;
@@ -35,13 +36,25 @@ export const DialogContent = styled.div`
 `;
 
 export const DialogBottom = styled.div`
-  border-top: 0.1rem solid #e6e6e6;
+  border-top: 0.1rem solid ${theme.colors.gray3};
 `;
 
 export const CancelBtn = styled.button`
   width: 50%;
+  height: 5.92rem;
+  ${theme.fonts.h4};
+  border-right: 0.1rem solid ${theme.colors.gray3};
+  padding: 2rem 0;
+  text-align: center;
+  cursor: pointer;
 `;
 
-export const ActionBtn = styled.button`
+export const ActionBtn = styled.button<{ dialogType?: any; disabled?: boolean; onClick?: () => void }>`
   width: 50%;
+  height: 5.92rem;
+  ${theme.fonts.h4}
+
+  cursor: pointer;
+  padding: 1.9rem 0;
+  border-bottom-right-radius: 1.4rem;
 `;

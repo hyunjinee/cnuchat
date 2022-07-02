@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 
 import useDialog from 'hooks/useDialog';
-import { Container, FeatureContainer, Form, ButtonContainer, MessageInput } from './styles';
 import Dialog from 'components/common/Dialog';
+import DialogReConnect from 'components/chat/DialogReConnect';
+import { Container, FeatureContainer, Form, ButtonContainer, MessageInput } from './styles';
 
 const ChatForm: React.FC = () => {
   const [message, setMessage] = useState('');
@@ -18,6 +19,8 @@ const ChatForm: React.FC = () => {
     console.log(message);
     setMessage('');
   };
+
+  const onCloseDialog = () => toggleDialog();
 
   return (
     <Container>
@@ -35,7 +38,11 @@ const ChatForm: React.FC = () => {
         </ButtonContainer>
       </Form>
 
-      {dialogVisible && <Dialog type={'alert'} children={undefined} />}
+      {dialogVisible && (
+        <Dialog type={'alert'} onClose={onCloseDialog}>
+          <DialogReConnect />
+        </Dialog>
+      )}
     </Container>
   );
 };

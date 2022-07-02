@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import {
   ActionBtn,
@@ -14,32 +15,37 @@ interface DialogProps {
   type: 'modal' | 'alert';
   confirmText?: string;
   children: React.ReactNode;
-  disabledConfirm?: boolean;
+  disabled?: boolean;
   onConfirm?: () => void;
-  onCancel?: () => void;
+  onClose?: () => void;
 }
 
 const Dialog: React.FC<DialogProps> = ({
   type = 'modal',
   confirmText,
-  disabledConfirm = false,
+  disabled = false,
   onConfirm,
-  onCancel,
+  onClose,
   children,
 }) => {
   const dialogRef = typeof window !== 'undefined' && (document.getElementById('root-dialog') as HTMLDivElement);
   if (!dialogRef) return null;
 
+  const renderDialogActionText = useCallback(() => {
+    if (confirmText) return confirmText;
+  }, []);
+
   return createPortal(
     <DialogWrapper>
-      <DialogDimmed />
+      <DialogDimmed onClick={onClose} />
       <DialogWrap>
         <DialogInner>
-          hi
           <DialogContent>{children}</DialogContent>
           <DialogBottom>
-            <CancelBtn>취소</CancelBtn>
-            <ActionBtn>ㅇㅋ</ActionBtn>
+            <CancelBtn onClick={onClose}>취소</CancelBtn>
+            <ActionBtn dialogType={type} disabled={disabled} onClick={onConfirm}>
+              ㅇㅋ
+            </ActionBtn>
           </DialogBottom>
         </DialogInner>
       </DialogWrap>
